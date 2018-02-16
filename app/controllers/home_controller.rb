@@ -1,10 +1,9 @@
 class HomeController < ApplicationController
   def index
-    end
+  end
 
-    def create
-      SendTweet.new(params[:tweet][:text]).perform
-      redirect_to root_path
-    end
+  def create
+    SendTweet.new(params[:tweet][:text]).perform
+    redirect_to root_path
   end
 end
